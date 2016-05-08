@@ -1,0 +1,21 @@
+<div class="new-image" align="center">
+	<img class="myimg"src="/assets/art.jpg">
+</div>
+<table class="table table-css">
+    <thead>
+      <tr>
+        <th style="background-color: #992100">Title</th>
+        <th  style="background-color: #992100">Text</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+		<td><%= article.text %></td>
+      </tr>
+     <% end %>
+    </tbody>
+  </table>
+<h4><%= link_to 'New article', new_article_path %></h4>
+
